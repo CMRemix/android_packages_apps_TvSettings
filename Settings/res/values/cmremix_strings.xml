@@ -16,6 +16,17 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-  <string name="about_cmremix_version">CMRemix version</string>
-  <string name="system_cmremix" translatable="false">CMRemix-Rom</string>
+        <string name="about_cmremix_version">CMRemix version</string>
+        <string name="system_cmremix" translatable="false">CMRemix-Rom</string>
+
+	<!-- CMRemix menus -->
+	<string name="cmremix_title">CMRemix</string>
+	<string name="cmremix_settings_title">CMREmix Interface</string>
+	<string name="misc_short">Misc</string>
+ 
+	<!-- CMRemix Updater -->
+	<string name="cmremixupdate_settings_title">CMRemix updates</string>
+	<string name="cmremixupdate_settings_alternate_title">System updates</string>
+	<string name="cmremixupdate_settings_summary">Check for, view or install available updates</string>
+
 </resources>

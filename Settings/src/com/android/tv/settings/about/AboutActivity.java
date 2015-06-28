@@ -100,6 +100,14 @@ public class AboutActivity extends DialogActivity implements ActionAdapter.Liste
     private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION = "android.settings.DEVICE_NAME";
 
     /**
+     * Intent action of CMRemix updater activity.
+     */
+    private static final ComponentName mCmupdaterActivity =
+            new ComponentName("com.cmremix.updater",
+                    "com.cmremix.updater.UpdatesSettingsTv");
+    private static final String SETTINGS_CM_UPDATER_ACTION = "android.intent.action.MAIN";
+
+    /**
      * Intent to launch ads activity.
      */
     private static final String SETTINGS_ADS_ACTIVITY_PACKAGE = "com.google.android.gms";

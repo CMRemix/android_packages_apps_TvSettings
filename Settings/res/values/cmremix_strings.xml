@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The CMRemix-ROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+        <string name="about_cmremix_version">CMRemix version</string>
+        <string name="system_cmremix" translatable="false">CMRemix-Rom</string>
+
+	<!-- CMRemix menus -->
+	<string name="cmremix_title">CMRemix</string>
+	<string name="cmremix_settings_title">CMREmix Interface</string>
+	<string name="misc_short">Misc</string>
+        <string name="cmremixota_title">CMRemixOTA</string>
+        <string name="cmremix_settings_title">CMRemix Settings</string>
+        <string name="cmremix_tweaks_title">Tweaks</string>
+ 
+	<!-- CMRemix Updater -->
+	<string name="cmremixupdate_settings_title">CMRemix updates</string>
+	<string name="cmremixupdate_settings_alternate_title">System updates</string>
+	<string name="cmremixupdate_settings_summary">Check for, view or install available updates</string>
+
+</resources>

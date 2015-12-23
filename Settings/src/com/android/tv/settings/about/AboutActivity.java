@@ -78,7 +78,7 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final int KEY_BUILD = 0;
     private static final int KEY_VERSION = 1;
     private static final int KEY_REBOOT = 2;
-    private static final int KEY_MOD_VERSION = 3;
+    private static final int KEY_CMREMIX_VERSION = 3;
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String LOG_TAG = "AboutSettings";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
@@ -100,11 +100,11 @@ public class AboutActivity extends SettingsLayoutActivity {
     private static final String SETTINGS_DEVICE_NAME_INTENT_ACTION = "android.settings.DEVICE_NAME";
 
     /**
-     * Intent action of CyanogenMod updater activity.
+     * Intent action of CMREmix updater activity.
      */
     private static final ComponentName mCmupdaterActivity =
-            new ComponentName("com.cyanogenmod.updater",
-                    "com.cyanogenmod.updater.UpdatesSettingsTv");
+            new ComponentName("com.cmremix.updater",
+                    "com.cmremix.updater.UpdatesSettingsTv");
     private static final String SETTINGS_CM_UPDATER_ACTION = "android.intent.action.MAIN";
 
     /**
@@ -118,7 +118,7 @@ public class AboutActivity extends SettingsLayoutActivity {
      * Get the CyanogenMod version.
      */
     public static String getDisplayVersion() {
-        return SystemProperties.get("ro.cm.display.version");
+        return SystemProperties.get("ro.cmremix_version");
     }
 
     /**
@@ -251,12 +251,12 @@ public class AboutActivity extends SettingsLayoutActivity {
                     showToast(getString(R.string.show_dev_already_cm));
                 }
             }
-        } else if (key == KEY_MOD_VERSION) {
+        } else if (key == KEY_CMREMIX_VERSION) {
             mHits[mHitsIndex] = SystemClock.uptimeMillis();
             mHitsIndex = (mHitsIndex + 1) % mHits.length;
             if (mHits[mHitsIndex] >= SystemClock.uptimeMillis() - 500) {
                 Intent intent = new Intent();
-                intent.putExtra("is_cm", true);
+                intent.putExtra("is_cmremix", true);
                 intent.setComponent(mPlatLogoActivity);
                 startActivity(intent);
             }
@@ -308,14 +308,6 @@ public class AboutActivity extends SettingsLayoutActivity {
                 .title(R.string.about_preference)
                 .build();
 
-        final Intent cmupdaterIntent = new Intent();
-        cmupdaterIntent.setComponent(mCmupdaterActivity);
-        cmupdaterIntent.setAction(SETTINGS_CM_UPDATER_ACTION);
-        cmupdaterIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-
-        header.add(new Layout.Action.Builder(res, cmupdaterIntent)
-                .title(R.string.about_cmupdate_settings_title)
-                .build());
         header.add(mDeviceNameLayoutGetter);
         header.add(new Layout.Action.Builder(res, KEY_REBOOT)
                 .title(R.string.restart_button_label)
@@ -364,8 +356,8 @@ public class AboutActivity extends SettingsLayoutActivity {
                     .build());
         }
 
-        header.add(new Layout.Action.Builder(res, KEY_MOD_VERSION)
-                .title(R.string.about_mod_version)
+        header.add(new Layout.Action.Builder(res, KEY_CMREMIX_VERSION)
+                .title(R.string.about_cmremix_version)
                 .description(getDisplayVersion())
                 .build());
         header.add(new Layout.Action.Builder(res, KEY_VERSION)
